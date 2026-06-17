@@ -1,0 +1,191 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>College Event Management System</title>
+    <style>
+        /* Base Styles */
+        * { margin: 0; padding: 0; box-sizing: border-box; font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif; }
+        html { scroll-behavior: smooth; }
+        body { color: #333; line-height: 1.6; }
+
+        /* Navbar */
+        .navbar { background-color: #1a256c; padding: 15px 50px; display: flex; justify-content: space-between; align-items: center; position: fixed; width: 100%; top: 0; z-index: 1000; }
+        .navbar .logo { color: #fff; font-size: 24px; font-weight: bold; }
+        .navbar ul { list-style: none; display: flex; }
+        .navbar ul li { margin-left: 20px; }
+        .navbar ul li a { color: #fff; text-decoration: none; font-size: 16px; transition: 0.3s; }
+        .navbar ul li a:hover { color: #f4b41a; }
+
+        /* Sections */
+        section { padding: 100px 50px 50px; min-height: 100vh; }
+        
+        /* Home Section */
+        #home { background: linear-gradient(rgba(0,0,0,0.6), rgba(0,0,0,0.6)), url('https://unsplash.com') no-repeat center center/cover; color: #fff; display: flex; flex-direction: column; justify-content: center; align-items: center; text-align: center; }
+        #home h1 { font-size: 50px; margin-bottom: 10px; color: #f4b41a; }
+        #home p { font-size: 20px; margin-bottom: 30px; }
+        .btn { padding: 15px 30px; background-color: #f4b41a; color: #1a256c; text-decoration: none; font-size: 18px; font-weight: bold; border-radius: 5px; transition: 0.3s; }
+        .btn:hover { background-color: #fff; color: #1a256c; }
+
+        /* About & Contact */
+        #about, #contact { background-color: #f9f9f9; text-align: center; }
+        h2 { font-size: 40px; margin-bottom: 20px; color: #1a256c; position: relative; }
+        h2::after { content: ''; display: block; width: 50px; height: 3px; background-color: #f4b41a; margin: 10px auto 0; }
+        .about-text { max-width: 800px; margin: 0 auto; font-size: 18px; }
+
+        /* Event Schedule */
+        #schedule { background-color: #fff; }
+        .schedule-table { width: 100%; border-collapse: collapse; margin-top: 30px; }
+        .schedule-table th, .schedule-table td { border: 1px solid #ddd; padding: 15px; text-align: left; }
+        .schedule-table th { background-color: #1a256c; color: #fff; }
+        .schedule-table tr:nth-child(even) { background-color: #f2f2f2; }
+
+        /* Registration Form */
+        #registration { background-color: #eaeaea; }
+        .form-container { max-width: 600px; margin: 0 auto; background: #fff; padding: 30px; border-radius: 8px; box-shadow: 0 4px 8px rgba(0,0,0,0.1); }
+        .form-group { margin-bottom: 20px; }
+        .form-group label { display: block; font-weight: bold; margin-bottom: 5px; }
+        .form-group input, .form-group select { width: 100%; padding: 10px; border: 1px solid #ddd; border-radius: 5px; }
+        .form-group button { width: 100%; padding: 12px; background-color: #1a256c; color: #fff; border: none; font-size: 18px; border-radius: 5px; cursor: pointer; }
+        .form-group button:hover { background-color: #f4b41a; color: #1a256c; }
+
+        /* Contact */
+        .contact-info { display: flex; justify-content: space-around; margin-top: 40px; flex-wrap: wrap; }
+        .contact-card { background: #fff; padding: 20px; border-radius: 8px; width: 30%; box-shadow: 0 2px 5px rgba(0,0,0,0.1); }
+        .contact-card h3 { color: #1a256c; margin-bottom: 10px; }
+
+        /* Footer */
+        footer { background-color: #111; color: #fff; text-align: center; padding: 20px 0; }
+    </style>
+</head>
+<body>
+
+    <!-- Navigation Bar -->
+    <nav class="navbar">
+        <div class="logo">CampusEvents</div>
+        <ul>
+            <li><a href="#home">Home</a></li>
+            <li><a href="#about">About</a></li>
+            <li><a href="#schedule">Schedule</a></li>
+            <li><a href="#registration">Register</a></li>
+            <li><a href="#contact">Contact</a></li>
+        </ul>
+    </nav>
+
+    <!-- Home Section -->
+    <section id="home">
+        <h1>Annual College Tech & Cultural Fest</h1>
+        <p>Join us for 3 days of innovation, coding, art, and music!</p>
+        <a href="#registration" class="btn">Register Now</a>
+    </section>
+
+    <!-- About Section -->
+    <section id="about">
+        <h2>About Us</h2>
+        <p class="about-text">Welcome to our premier College Event Management System. We aim to bring together the brightest minds and most creative talents across disciplines to compete, collaborate, and celebrate. From competitive hackathons to mesmerizing dance performances, there's something here for everyone.</p>
+    </section>
+
+    <!-- Schedule Section -->
+    <section id="schedule">
+        <h2>Event Schedule</h2>
+        <table class="schedule-table">
+            <thead>
+                <tr>
+                    <th>Date</th>
+                    <th>Time</th>
+                    <th>Event</th>
+                    <th>Venue</th>
+                </tr>
+            </thead>
+            <tbody>
+                <tr>
+                    <td>Oct 15, 2026</td>
+                    <td>09:00 AM - 11:00 AM</td>
+                    <td>Inauguration Ceremony</td>
+                    <td>Main Auditorium</td>
+                </tr>
+                <tr>
+                    <td>Oct 15, 2026</td>
+                    <td>11:30 AM - 04:00 PM</td>
+                    <td>National Hackathon</td>
+                    <td>Computer Lab 1</td>
+                </tr>
+                <tr>
+                    <td>Oct 16, 2026</td>
+                    <td>10:00 AM - 01:00 PM</td>
+                    <td>Robotics Showcase</td>
+                    <td>Sports Complex</td>
+                </tr>
+                <tr>
+                    <td>Oct 16, 2026</td>
+                    <td>06:00 PM - 09:00 PM</td>
+                    <td>Battle of the Bands</td>
+                    <td>Open Air Theater</td>
+                </tr>
+            </tbody>
+        </table>
+    </section>
+
+    <!-- Registration Section -->
+    <section id="registration">
+        <h2>Event Registration</h2>
+        <div class="form-container">
+            <form action="#" method="POST">
+                <div class="form-group">
+                    <label for="name">Full Name</label>
+                    <input type="text" id="name" name="name" required>
+                </div>
+                <div class="form-group">
+                    <label for="email">College Email</label>
+                    <input type="email" id="email" name="email" required>
+                </div>
+                <div class="form-group">
+                    <label for="college">College Name</label>
+                    <input type="text" id="college" name="college" required>
+                </div>
+                <div class="form-group">
+                    <label for="event">Select Event</label>
+                    <select id="event" name="event" required>
+                        <option value="" disabled selected>Select an event</option>
+                        <option value="hackathon">National Hackathon</option>
+                        <option value="robotics">Robotics Showcase</option>
+                        <option value="music">Battle of the Bands</option>
+                    </select>
+                </div>
+                <div class="form-group">
+                    <button type="submit">Submit Registration</button>
+                </div>
+            </form>
+        </div>
+    </section>
+
+    <!-- Contact Section -->
+    <section id="contact">
+        <h2>Contact Us</h2>
+        <div class="contact-info">
+            <div class="contact-card">
+                <h3>General Enquiries</h3>
+                <p>Email: info@campusevents.edu</p>
+                <p>Phone: +91 98765 43210</p>
+            </div>
+            <div class="contact-card">
+                <h3>Technical Support</h3>
+                <p>Email: tech@campusevents.edu</p>
+                <p>Phone: +91 91234 56780</p>
+            </div>
+            <div class="contact-card">
+                <h3>Location</h3>
+                <p>Main Campus Building</p>
+                <p>Yerla, Maharashtra, India</p>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer>
+        <p>&copy; 2026 College Event Management System. All rights reserved.</p>
+    </footer>
+
+</body>
+</html>
